@@ -38,4 +38,16 @@ class AuthController extends Controller
     public function dashboard(){
         return view('auth.dashboard');
     }
+
+    //Fonction pour se déconnecter
+    public function logout(Request $request): RedirectResponse{
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect()->route('login');
+    }
+
 }

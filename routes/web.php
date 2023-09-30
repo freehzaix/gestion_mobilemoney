@@ -28,3 +28,4 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/post', [AuthController::class, 'login_post'])->name('login.post');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

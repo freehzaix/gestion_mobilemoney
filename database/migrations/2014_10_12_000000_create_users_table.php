@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('adresse')->nullable();
             $table->string('ville')->nullable();
             $table->string('pays')->nullable();
-            $table->string('image_profil')->default('images/no-image.jpg');
+            $table->string('image_profil')->default('images/no-image.png');
             $table->rememberToken();
             $table->timestamps();
 
