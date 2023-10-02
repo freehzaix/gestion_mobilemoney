@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Abonnement;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -36,7 +37,11 @@ class AuthController extends Controller
 
     //Afficher la vue dashboard
     public function dashboard(){
-        return view('auth.dashboard');
+        if(Auth::check()){
+            return view('auth.dashboard');
+        }else{
+            return redirect()->route('login');
+        } 
     }
 
     //Fonction pour se déconnecter
@@ -48,6 +53,17 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
     
         return redirect()->route('login');
+    }
+
+    //Afficher les informations sur l'abonnement en cours
+    public function abonnement(){
+        $abonnement = Abonnement::find(Auth::user()->abonnement_id);
+        return view('auth.abonnement', compact('abonnement'));
+    }
+
+    //Afficher les informations sur le profil utilisateur connecté
+    public function monprofil(){
+        return view('auth.monprofil');
     }
 
 }

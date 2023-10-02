@@ -28,4 +28,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/post', [AuthController::class, 'login_post'])->name('login.post');
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
+Route::get('/monprofil', [AuthController::class, 'monprofil'])->name('monprofil');
+Route::get('/abonnement', [AuthController::class, 'abonnement'])->name('abonnement');
+
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
