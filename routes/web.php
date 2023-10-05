@@ -29,6 +29,8 @@ Route::post('/login/post', [AuthController::class, 'login_post'])->name('login.p
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/monprofil', [AuthController::class, 'monprofil'])->name('monprofil');
+Route::post('/monprofil', [AuthController::class, 'monprofil_update'])->name('monprofil');
+Route::get('/supprimermoncompte', [AuthController::class, 'supprimermoncompte'])->name('supprimermoncompte');
 Route::get('/abonnement', [AuthController::class, 'abonnement'])->name('abonnement');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

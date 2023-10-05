@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Abonnement;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
@@ -64,6 +65,24 @@ class AuthController extends Controller
     //Afficher les informations sur le profil utilisateur connecté
     public function monprofil(){
         return view('auth.monprofil');
+    }
+
+    //Mise à jour du profil dans la base de données
+    public function monprofil_update(Request $request){
+        $user = User::find(Auth::user()->id);
+        $user->nom = $request->nom;
+        $user->prenom = $request->prenom;
+        $user->adresse = $request->adresse;
+        $user->telephone = $request->telephone;
+        $user->ville = $request->ville;
+        $user->pays = $request->pays;
+        $user->update();
+        return redirect()->route('monprofil')->with('status', 'Vos informations ont bien été mise à jours.');
+    }
+
+    //Afficher l'interface de suppression du compte
+    public function supprimermoncompte(){
+        return view('auth.supprimermoncompte');
     }
 
 }

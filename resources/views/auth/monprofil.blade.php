@@ -6,40 +6,55 @@
 
 @section('contenu')
 <div class="row">
+    @if (session('status'))
+        <div class="alert alert-success">{{ session('status') }}</div>
+    @endif
+</div>
+<div class="row">
     <div class="col-lg-6">
     <p>
-        <form action="#" method="post">
+        <form action="{{ route('monprofil') }}" method="post">
+            @csrf
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" id="nom" class="form-control" value="{{ Auth::user()->nom }}" />
+                <input type="text" id="nom" name="nom" class="form-control" value="{{ Auth::user()->nom }}" />
             </div>
             <div class="form-group">
                 <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" class="form-control" value="{{ Auth::user()->prenom }}" />
+                <input type="text" id="prenom" name="prenom" class="form-control" value="{{ Auth::user()->prenom }}" />
             </div>
             <div class="form-group">
                 <label for="inputEmail">E-Mail</label>
-                <input type="email" id="inputEmail" class="form-control" disabled value="{{ Auth::user()->email }}" />
+                <input type="email" id="inputEmail" name="email" class="form-control" disabled value="{{ Auth::user()->email }}" />
             </div>
             <div class="form-group">
                 <label for="telephone">Téléphone</label>
-                <input type="text" id="telephone" class="form-control" value="{{ Auth::user()->telephone }}" />
+                <input type="text" id="telephone" name="telephone" class="form-control" value="{{ Auth::user()->telephone }}" />
             </div>
             <div class="form-group">
                 <label for="adresse">Adresse géographique</label>
-                <input type="text" id="adresse" class="form-control" value="{{ Auth::user()->adresse }}" />
+                <input type="text" id="adresse" name="adresse" class="form-control" value="{{ Auth::user()->adresse }}" />
             </div>
             <div class="form-group">
                 <label for="ville">Ville</label>
-                <input type="text" id="ville" class="form-control" value="{{ Auth::user()->ville }}" />
+                <input type="text" id="ville" name="ville" class="form-control" value="{{ Auth::user()->ville }}" />
             </div>
             <div class="form-group">
                 <label for="pays">Pays</label>
-                <input type="text" id="pays" class="form-control" value="{{ Auth::user()->pays }}" />
+                <input type="text" id="pays" name="pays" class="form-control" value="{{ Auth::user()->pays }}" />
             </div>
             <br />
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Modifier mon profil">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Modifier mon profil">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form-group">
+                        <a href="{{ route('supprimermoncompte') }}" class="btn btn-danger">Supprimer mon compte</a>
+                    </div>
+                </div>
             </div>
             <br />
             <br />
@@ -70,7 +85,7 @@
             <form action="#" method="post">
                 <h3>Changez votre mot de passe</h3>
                 <div class="form-group">
-                    <label for="new_password">Nouveau mon de passe</label>
+                    <label for="new_password">Nouveau mot de passe</label>
                     <input type="text" id="new_password" class="form-control" />
                 </div>
                 <div class="form-group">
