@@ -67,11 +67,12 @@
   
         <div class="row">
             
-            <form action="#" method="post">
+            <form action="{{ route('modifierimageprofil') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <h3>Changez l'image de profil</h3>
                 <div class="form-group">
                     <label for="image_profil">Choisir une nouvelle image</label>
-                    <input type="file" id="image_profil" class="form-control" />
+                    <input type="file" id="image_profil" name="image_profil" class="form-control" required />
                 </div>  
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Changez l'image de profil">
