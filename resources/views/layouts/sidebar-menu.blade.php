@@ -9,39 +9,8 @@
         <i class="nav-icon fas fa-tachometer-alt"></i>
         <p>Tableau de bord</p>
       </a>
-      
     </li>
-    
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-mobile-alt"></i>
-        <p>Clients</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="nav-icon far fa-money-bill-alt"></i>
-        <p>Transaction</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-satellite-dish"></i>
-        <p>Opérateur réseau</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-search-dollar"></i>
-        <p>Caisse</p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-exclamation-triangle"></i>
-        <p>Erreurs</p>
-      </a>
-    </li>
+
     <li class="nav-item">
       <a href="#" class="nav-link">
         <i class="nav-icon fas fa-cogs"></i>
@@ -71,12 +40,14 @@
                 <p>Rôle</p>
               </a>
             </li>
+            
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fas fa-user-lock nav-icon"></i>
                 <p>Permission</p>
               </a>
             </li>
+            
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fas fa-user-friends nav-icon"></i>
@@ -84,7 +55,45 @@
               </a>
             </li>
             @endif
+            
       </ul>
+    </li>
+    
+    <li class="nav-item"><hr></li>
+
+    <li class="nav-item">
+      <a href="{{ route('operateur.index') }}" class="nav-link">
+        <i class="nav-icon fas fa-satellite-dish"></i>
+        <p>Opérateur réseau</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="{{ route('caisse.index') }}" class="nav-link">
+        <i class="nav-icon fas fa-search-dollar"></i>
+        <p>Caisse</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-mobile-alt"></i>
+        <p>Clients</p>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon far fa-money-bill-alt"></i>
+        <p>Transaction</p>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-exclamation-triangle"></i>
+        <p>Erreurs</p>
+      </a>
     </li>
     
     <li class="nav-header"><hr></li>

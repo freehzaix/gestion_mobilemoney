@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ModifierMotDePasseRequest;
+use App\Http\Requests\UserPostRequest;
+use App\Mail\ResetPassword;
 use App\Models\Abonnement;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
@@ -49,7 +54,7 @@ class AuthController extends Controller
     //Fonction pour se déconnecter
     public function logout(Request $request): RedirectResponse{
         Auth::logout();
-    
+        
         $request->session()->invalidate();
     
         $request->session()->regenerateToken();
@@ -104,7 +109,7 @@ class AuthController extends Controller
         //et créer un lien du repertoire storage vers public
         $path = $request->file('image_profil')->store('public/images');
         //Rétirer le repertoire public avant de mettre dans la base de données
-        $replace_path = str_replace('public', '', $path); 
+        $replace_path = str_replace('public', '', $path);
         //ajouter le repertoire "storage" pour l'insertion de la base de données
         $user->image_profil = "storage". $replace_path;            
         $user->update();
@@ -112,6 +117,28 @@ class AuthController extends Controller
         //Après avoir enregistrer, faire la rediretion
         return redirect()->route('monprofil')->with('status', 'L\'image '.$replace_path.' a été bien enregistré.');
        
+    }
+
+    //Modifier le mot de passe en Post
+    public function modifiermotdepasse(ModifierMotDePasseRequest $request){
+        $request->validated();
+
+        if($request->new_password != $request->re_password){
+            //Vérifier si les deux mots de passe sont différents pour afficher
+            // notre message d'erreur lors de la redirection.
+            return redirect()->route('monprofil')->with('error_password', 'Attention ! Les deux mots de passe ne sont pas identique.');
+        }
+        
+        //Hasher le nouveau mot de passe
+        $hash_password = Hash::make($request->new_password);
+        $user = User::find(Auth::user()->id);
+        $user->password = $hash_password;
+        $user->update();
+        
+        //Envoyez un mail après modification du mot de passe
+        Mail::to(Auth::user())->send(new ResetPassword($user));
+        
+        return redirect()->route('monprofil')->with('status', 'Le mot de pas a bien été modifié avec succès.');
     }
 
 }

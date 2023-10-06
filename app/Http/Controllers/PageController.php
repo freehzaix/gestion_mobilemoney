@@ -17,22 +17,8 @@ class PageController extends Controller
         return view('index');
     }
 
-    public function apropos(){
-        return view('apropos');
-    }
-    
-    public function tarif(){
-        $permissions = Permission::all();
-
-        return view('tarif', compact('permissions'));
-    }
-
-    public function nouscontacter(){
-        return view('nouscontacter');
-    }
-
     public function signup_free(){
-        return view('signup_free');
+        return view('auth.signup');
     }
 
     public function signup_free_post(UserPostRequest $request){
@@ -56,13 +42,13 @@ class PageController extends Controller
             $user->nom = $request->nom;
             $user->prenom = $request->prenom;
             $user->role_id = 1;
-            $user->permission_id = 2;
+            $user->permission_id = 1;
             $user->abonnement_id = $mon_abonnement->id;
             $user->save();
 
             Mail::to($request->email)->send(new ConfirmationInscription($user));
 
-            return redirect()->route('signup_free')->with('status', 'Votre a bien été pris en compte.');
+            return redirect()->route('signup')->with('status', 'Votre a bien été pris en compte.');
 
         }
         

@@ -23,7 +23,7 @@
                     Exepire le {{ date($abonnement->date_abonnement, $abonnement->nombre_jour)  }}                @endif
             </li>
         </ul>
-        <a href="#" class="btn btn-primary">Mettre à niveau</a>
+        <a href="{{ route('upgrade') }}" class="btn btn-primary">Mettre à niveau</a>
     </p>
     </div>
     <!-- /.col-md-6 -->

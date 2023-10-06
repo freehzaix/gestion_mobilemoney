@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('caisses', function (Blueprint $table) {
+        Schema::create('operateurs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nom_operateur');
+            $table->string('url_operateur');
+            $table->unsignedBigInteger('abonnement_id');
+            $table->foreign('abonnement_id')->references('id')->on('abonnements');
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('caisses');
+        Schema::dropIfExists('opérateurs');
     }
 };

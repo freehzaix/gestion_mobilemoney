@@ -19,5 +19,9 @@ class Abonnement extends Model
     public function users(){
         return $this->hasMany(User::class);
     }
+
+    public function operateurs(){
+        return $this->hasMany(Operateur::class);
+    }
     
 }

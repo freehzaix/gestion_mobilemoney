@@ -13,8 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('opérateurs', function (Blueprint $table) {
+        Schema::create('caisses', function (Blueprint $table) {
             $table->id();
+            $table->string('nom_caisse')->default('caisse');
+            $table->integer('montant_caisse')->nullable();
+            $table->decimal('taux_caisse');
+            $table->unsignedBigInteger('operateur_id');
+            $table->foreign('operateur_id')->references('id')->on('operateurs');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('opérateurs');
+        Schema::dropIfExists('caisses');
     }
 };

@@ -83,15 +83,25 @@
 
         <div class="row">
             
-            <form action="#" method="post">
+            <form action="{{ route('modifiermotdepasse') }}" method="post">
+                @csrf
                 <h3>Changez votre mot de passe</h3>
+                @if(session('error_password'))
+                    <div class="alert alert-danger"> {{ session('error_password') }} </div>
+                @endif
                 <div class="form-group">
                     <label for="new_password">Nouveau mot de passe</label>
-                    <input type="text" id="new_password" class="form-control" />
+                    <input type="password" name="new_password" id="new_password" class="form-control" />
+                    @error('new_password')
+                        <small class="text text-danger">{{ $message }}</small>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="re_password">Re-tapez le mot de passe</label>
-                    <input type="text" id="re_password" class="form-control" />
+                    <input type="password" name="re_password" id="re_password" class="form-control" />
+                    @error('re_password')
+                        <small class="text text-danger">{{ $message }}</small>
+                    @enderror
                 </div>
                 
                 <div class="form-group">
