@@ -14,6 +14,7 @@ class Caisse extends Model
         'montant_caisse',
         'taux_caisse',
         'operateur_id',
+        'abonnement_id',
     ];
 
     public function operateurs(){

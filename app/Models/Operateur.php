@@ -15,10 +15,6 @@ class Operateur extends Model
         'abonnement_id',
     ];
 
-    public function abonnements(){
-        return $this->belongsTo(Abonnement::class);
-    }
-
     public function caisses(){
         return $this->hasMany(Caisse::class);
     }

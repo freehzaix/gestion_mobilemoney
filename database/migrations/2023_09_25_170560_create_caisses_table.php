@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('montant_caisse')->nullable();
             $table->decimal('taux_caisse');
             $table->unsignedBigInteger('operateur_id');
-            $table->foreign('operateur_id')->references('id')->on('operateurs');
+            $table->unsignedBigInteger('abonnement_id');
             $table->timestamps();
         });
     }

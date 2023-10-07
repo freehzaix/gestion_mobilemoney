@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('type_transactions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('abonnement_id');
         });
     }
 

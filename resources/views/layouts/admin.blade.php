@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MobileApp Web | @yield('titlePage')</title>
+
+  <!-- Favicons -->
+  <link href="/frontend/img/favicon.png" rel="icon">
+  <link href="/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->

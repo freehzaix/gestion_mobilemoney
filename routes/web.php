@@ -42,9 +42,12 @@ Route::prefix('dashboard')->group(function () {
 
     Route::get('/operateur', [OperateurController::class, 'index'])->name('operateur.index');
     Route::get('/operateur/add', [OperateurController::class, 'add'])->name('operateur.add');
-
+    Route::post('/operateur/add', [OperateurController::class, 'add_post'])->name('operateur.add.post');
+    
     Route::get('/caisse', [CaisseController::class, 'index'])->name('caisse.index');
-
+    Route::get('/caisse/add', [CaisseController::class, 'add'])->name('caisse.add');
+    Route::post('/caisse/add', [CaisseController::class, 'add_post'])->name('caisse.add.post');
+    
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 });

@@ -28,7 +28,7 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Se connecter pour démarrer votre session</p>
+      <p class="login-box-msg">Se connecter pour commencer</p>
       
       <form action="{{ route('login.post') }}" method="post">
         @csrf
