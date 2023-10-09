@@ -43,8 +43,8 @@
                 <td>{{ $item->montant_caisse }} FCFA</td>
                 <td>{{ $item->taux_caisse }}%</td>
                 <td>
-                    <a href="#"><i class="fa fa-edit mr-2"></i></a>
-                    <a href="#"><i class="fa fa-trash"></i></a>
+                  <a href="{{ route('caisse.show', $item->id) }}"><i class="fa fa-edit mr-2"></i></a>
+                  <a href="{{ route('caisse.delete', $item->id) }}"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
               @php

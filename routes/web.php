@@ -43,10 +43,16 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/operateur', [OperateurController::class, 'index'])->name('operateur.index');
     Route::get('/operateur/add', [OperateurController::class, 'add'])->name('operateur.add');
     Route::post('/operateur/add', [OperateurController::class, 'add_post'])->name('operateur.add.post');
+    Route::get('/operateur/edit/{id}', [OperateurController::class, 'show'])->name('operateur.show');
+    Route::post('/operateur/update', [OperateurController::class, 'update'])->name('operateur.update');
+    Route::post('/operateur/delete/{id}', [OperateurController::class, 'delete'])->name('operateur.delete');
     
     Route::get('/caisse', [CaisseController::class, 'index'])->name('caisse.index');
     Route::get('/caisse/add', [CaisseController::class, 'add'])->name('caisse.add');
     Route::post('/caisse/add', [CaisseController::class, 'add_post'])->name('caisse.add.post');
+    Route::get('/caisse/edit/{id}', [CaisseController::class, 'show'])->name('caisse.show');
+    Route::post('/caisse/update', [CaisseController::class, 'update'])->name('caisse.update');
+    Route::post('/caisse/delete/{id}', [CaisseController::class, 'delete'])->name('caisse.delete');
     
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 

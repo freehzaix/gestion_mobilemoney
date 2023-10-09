@@ -43,4 +43,30 @@ class CaisseController extends Controller
 
     }
 
+    //Afficher le formulaire pour modifier une caisse
+    public function show($id){
+        $caisse = Caisse::find($id);
+        return view('auth.caisse.show', compact('caisse'));
+    }
+
+    //Modifier la caisse en Post
+    public function update(Request $request){
+        $caisse = Caisse::find($request->id);
+        $caisse->nom_caisse = $request->nom_caisse;
+        $caisse->montant_caisse = $request->montant_caisse;
+        $caisse->taux_caisse = $request->taux_caisse;
+        $caisse->operateur_id = $request->operateur_id;
+        $caisse->update();
+
+        return redirect()->route('caisse.index')->with('status', 'La caisse a bien été modifiée.');
+    }
+
+    //Supprimer une caisse
+    public function delete($id){
+        $caisse = Caisse::find($id);
+        $caisse->delete();
+
+        return redirect()->route('caisse.index')->with('status', 'La caisse a bien été supprimée.');
+    }
+    
 }

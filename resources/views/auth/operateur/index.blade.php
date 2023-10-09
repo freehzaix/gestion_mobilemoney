@@ -39,8 +39,8 @@
                 </td>
                 <td>{{ $item->nom_operateur }}</td>
                 <td>
-                    <a href="#"><i class="fa fa-edit mr-2"></i></a>
-                    <a href="#"><i class="fa fa-trash"></i></a>
+                    <a href="{{ route('operateur.show', $item->id) }}"><i class="fa fa-edit mr-2"></i></a>
+                    <a href="{{ route('operateur.delete', $item->id) }}"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
               @php
