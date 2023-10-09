@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
 @section('titlePage')
-    Opérateur réseau
+    Client
 @endsection
 
 @section('contenu')
 
 <div class="row ml-3 mr-3">
-  <h5><a class="btn btn-primary" href="{{ route('operateur.add') }}">Ajouter un opérateur</a></h5>
+  <h5><a class="btn btn-primary" href="{{ route('client.add') }}">Ajouter un client</a></h5>
 </div>
 
 <div class="row mt-3">
@@ -22,8 +22,9 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Logo</th>
-                <th>Nom de l'opérateur</th>
+                <th>Téléphone</th>
+                <th>Nom & Prénom</th>
+                <th>Adresse</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -31,16 +32,15 @@
               @php
                   $iteration = 1;
               @endphp
-              @foreach ($operateurs as $item)
+              @foreach ($clients as $item)
               <tr>
-                <td>{{ $iteration }}</td>
+                <td>{{ $iteration }}</td>              
+                <td>{{ $item->telephone }}</td>
+                <td>{{ $item->nom }} {{ $item->prenom }}</td>
+                <td>{{ $item->adresse }}</td>
                 <td>
-                  <img src="/{{ $item->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
-                </td>
-                <td>{{ $item->nom_operateur }}</td>
-                <td>
-                    <a href="{{ route('operateur.show', $item->id) }}"><i class="fa fa-edit mr-2 text-green"></i></a>
-                    <a href="{{ route('operateur.delete', $item->id) }}"><i class="fa fa-trash text-red"></i></a>
+                  <a href="{{ route('client.show', $item->id) }}"><i class="fa fa-edit mr-2 text-green"></i></a>
+                  <a href="{{ route('client.delete', $item->id) }}"><i class="fa fa-trash text-red"></i></a>
                 </td>
               </tr>
               @php

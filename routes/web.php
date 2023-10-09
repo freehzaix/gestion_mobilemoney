@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CaisseController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OperateurController;
 use App\Models\Abonnement;
 
@@ -45,14 +46,21 @@ Route::prefix('dashboard')->group(function () {
     Route::post('/operateur/add', [OperateurController::class, 'add_post'])->name('operateur.add.post');
     Route::get('/operateur/edit/{id}', [OperateurController::class, 'show'])->name('operateur.show');
     Route::post('/operateur/update', [OperateurController::class, 'update'])->name('operateur.update');
-    Route::post('/operateur/delete/{id}', [OperateurController::class, 'delete'])->name('operateur.delete');
+    Route::get('/operateur/delete/{id}', [OperateurController::class, 'delete'])->name('operateur.delete');
     
     Route::get('/caisse', [CaisseController::class, 'index'])->name('caisse.index');
     Route::get('/caisse/add', [CaisseController::class, 'add'])->name('caisse.add');
     Route::post('/caisse/add', [CaisseController::class, 'add_post'])->name('caisse.add.post');
     Route::get('/caisse/edit/{id}', [CaisseController::class, 'show'])->name('caisse.show');
     Route::post('/caisse/update', [CaisseController::class, 'update'])->name('caisse.update');
-    Route::post('/caisse/delete/{id}', [CaisseController::class, 'delete'])->name('caisse.delete');
+    Route::get('/caisse/delete/{id}', [CaisseController::class, 'delete'])->name('caisse.delete');
+
+    Route::get('/client', [ClientController::class, 'index'])->name('client.index');
+    Route::get('/client/add', [ClientController::class, 'add'])->name('client.add');
+    Route::post('/client/add', [ClientController::class, 'add_post'])->name('client.add.post');
+    Route::get('/client/edit/{id}', [ClientController::class, 'show'])->name('client.show');
+    Route::post('/client/update', [ClientController::class, 'update'])->name('client.update');
+    Route::get('/client/delete/{id}', [ClientController::class, 'delete'])->name('client.delete');
     
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 

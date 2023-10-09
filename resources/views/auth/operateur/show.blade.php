@@ -10,7 +10,7 @@
     <div class="col-lg-8">
         <form action="{{ route('operateur.update') }}" method="post" enctype="multipart/form-data">
             @csrf
-            <input type="text" name="id" value="{{ $operateur->id }}" disabled>
+            <input type="text" name="id" value="{{ $operateur->id }}" style="display: none;">
             <div class="form-group">
                 <label for="nom_operateur">Nom de l'opérateur</label>
                 <input type="text" id="nom_operateur" name="nom_operateur" class="form-control"value="{{ $operateur->nom_operateur }}" required />

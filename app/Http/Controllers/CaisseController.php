@@ -28,7 +28,7 @@ class CaisseController extends Controller
             'nom_caisse' => 'required',
             'montant_caisse' => 'required',
             'taux_caisse' => 'required',
-            'operateur_id' => 'required|unique:caisses',
+            'operateur_id' => 'unique:caisses',
         ]);
 
         $caisse = new Caisse();
@@ -45,8 +45,9 @@ class CaisseController extends Controller
 
     //Afficher le formulaire pour modifier une caisse
     public function show($id){
+        $operateur = Operateur::where('abonnement_id', Auth::user()->abonnement_id)->get();
         $caisse = Caisse::find($id);
-        return view('auth.caisse.show', compact('caisse'));
+        return view('auth.caisse.show', compact('caisse', 'operateur'));
     }
 
     //Modifier la caisse en Post

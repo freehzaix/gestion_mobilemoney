@@ -23,9 +23,9 @@
               <tr>
                 <th>#</th>
                 <th>Logo</th>
-                <th>Nom de la caisse</th>
-                <th>Montant de la caisse</th>
-                <th>Taux de caisse (en %)</th>
+                <th>Nom</th>
+                <th>Montant</th>
+                <th>Taux (en %)</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -37,14 +37,17 @@
               <tr>
                 <td>{{ $iteration }}</td>
                 <td>
-                  <img src="/{{ $item->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
+                  @php
+                    $op = App\Models\Operateur::find($item->operateur_id);
+                  @endphp
+                  <img src="/{{ $op->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
                 </td>
                 <td>{{ $item->nom_caisse }}</td>
                 <td>{{ $item->montant_caisse }} FCFA</td>
                 <td>{{ $item->taux_caisse }}%</td>
                 <td>
-                  <a href="{{ route('caisse.show', $item->id) }}"><i class="fa fa-edit mr-2"></i></a>
-                  <a href="{{ route('caisse.delete', $item->id) }}"><i class="fa fa-trash"></i></a>
+                  <a href="{{ route('caisse.show', $item->id) }}"><i class="fa fa-edit mr-2 text-green"></i></a>
+                  <a href="{{ route('caisse.delete', $item->id) }}"><i class="fa fa-trash text-red"></i></a>
                 </td>
               </tr>
               @php

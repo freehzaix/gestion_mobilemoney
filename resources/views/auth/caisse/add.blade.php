@@ -42,7 +42,7 @@
                 @foreach ($operateur as $item)
                     <div class="mt-2">
                         <img src="/{{ $item->url_operateur }}" height="32px" /> 
-                        <input type="radio" name="operateur_id" class="ml-1" value="{{ $item->operateur_id }}" />
+                        <input type="radio" name="operateur_id" class="ml-1" value="{{ $item->id }}" />
                         {{ $item->nom_operateur }}
                     </div>
                 @endforeach
