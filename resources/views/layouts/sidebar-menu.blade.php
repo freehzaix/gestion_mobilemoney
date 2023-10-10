@@ -76,14 +76,14 @@
     </li>
 
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('client.index') }}" class="nav-link">
         <i class="nav-icon fas fa-mobile-alt"></i>
         <p>Clients</p>
       </a>
     </li>
 
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('transaction.index') }}" class="nav-link">
         <i class="nav-icon far fa-money-bill-alt"></i>
         <p>Transaction</p>
       </a>

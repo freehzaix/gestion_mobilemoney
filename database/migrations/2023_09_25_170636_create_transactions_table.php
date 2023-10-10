@@ -15,9 +15,18 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->unsignedBigInteger('operateur_id');
+            $table->integer('montant')->default(0);
+            $table->longText('details')->nullable();
+            $table->dateTime('dateHeure');
+            $table->string('type')->nullable();
+            $table->integer('frais')->default(0);
+            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('caisse_id');
             $table->unsignedBigInteger('abonnement_id');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->foreign('caisse_id')->references('id')->on('caisses')->onDelete('cascade');
+            $table->foreign('abonnement_id')->references('id')->on('abonnements')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

@@ -20,6 +20,8 @@ return new class extends Migration
             $table->decimal('taux_caisse');
             $table->unsignedBigInteger('operateur_id');
             $table->unsignedBigInteger('abonnement_id');
+            $table->foreign('operateur_id')->references('id')->on('operateurs')->onDelete('cascade');
+            $table->foreign('abonnement_id')->references('id')->on('abonnements')->onDelete('cascade');
             $table->timestamps();
         });
     }

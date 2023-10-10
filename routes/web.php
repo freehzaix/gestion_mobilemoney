@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CaisseController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OperateurController;
+use App\Http\Controllers\TransactionController;
 use App\Models\Abonnement;
 
 /*
@@ -62,6 +63,16 @@ Route::prefix('dashboard')->group(function () {
     Route::post('/client/update', [ClientController::class, 'update'])->name('client.update');
     Route::get('/client/delete/{id}', [ClientController::class, 'delete'])->name('client.delete');
     
+    Route::get('/client/rechercher-client', [ClientController::class, 'rechercherClient'])->name('rechercher-client');
+
+    Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
+    Route::get('/transaction/add', [TransactionController::class, 'add'])->name('transaction.add');
+    Route::post('/transaction/add', [TransactionController::class, 'add_post'])->name('transaction.add.post');
+    Route::get('/transaction/edit/{id}', [TransactionController::class, 'show'])->name('transaction.show');
+    Route::post('/transaction/update', [TransactionController::class, 'update'])->name('transaction.update');
+    Route::get('/transaction/delete/{id}', [TransactionController::class, 'delete'])->name('transaction.delete');
+
+
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 });

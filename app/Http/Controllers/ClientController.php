@@ -23,7 +23,7 @@ class ClientController extends Controller
     public function add_post(Request $request){
         
         $request->validate([
-            'telephone' => 'required|unique:clients',
+            'telephone' => 'required|min:10|max:10',
         ]);
 
         $client = new Client();
@@ -67,5 +67,14 @@ class ClientController extends Controller
 
         return redirect()->route('client.index')->with('status', 'Le client a bien été supprimée.');
     }
+
+    public function rechercherClient(Request $request)
+{
+    $numeroTelephone = $request->input('telephone');
+
+    $clients = Client::where('telephone', 'LIKE', '%' . $numeroTelephone . '%')->get();
+
+    return response()->json(['clients' => $clients]);
+}
     
 }

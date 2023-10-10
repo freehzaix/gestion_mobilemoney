@@ -8,7 +8,7 @@
 
 <div class="row mt-3">
     <div class="col-lg-8">
-        <form action="{{ route('client.add.post') }}">
+        <form action="{{ route('client.add.post') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="telephone">Numéro de téléphone</label>

@@ -14,15 +14,15 @@
     <div class="col">
         
         <div class="row info-box">
-            <div class="col">
+            <div class="">
                 <img src="/{{ $item->url_operateur }}" height="100px" alt="{{ $item->nom_operateur }}">
             </div>
-            <div class="col info-box-content">
+            <div class="info-box-content">
                 @php 
                     $cai = App\Models\Caisse::where('operateur_id', $item->id)->first();
                     if(isset($cai->montant_caisse)){
                         @endphp
-                        <span class="info-box-text">{{ $item->nom_operateur }}</span>
+                        <span class="info-box-text">{{ $cai->nom_caisse }}</span>
                         <span class="info-box-number">{{ $cai->montant_caisse }} FCFA</span>
                         @php
                     }

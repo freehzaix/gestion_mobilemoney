@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('ville')->nullable();
             $table->string('pays')->nullable();
             $table->unsignedBigInteger('abonnement_id');
+            $table->foreign('abonnement_id')->references('id')->on('abonnements')->onDelete('cascade');
             $table->timestamps();
         });
     }

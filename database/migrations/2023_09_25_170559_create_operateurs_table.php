@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nom_operateur');
             $table->string('url_operateur');
             $table->unsignedBigInteger('abonnement_id');
-            $table->foreign('abonnement_id')->references('id')->on('abonnements');
+            $table->foreign('abonnement_id')->references('id')->on('abonnements')->onDelete('cascade');
             $table->timestamps();
         });
     }
