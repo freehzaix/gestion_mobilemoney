@@ -11,7 +11,7 @@
 </div>
 
 <div class="row mt-3">
-    <div class="col-lg-8">
+    <div class="col-lg-9">
 
       @if (session('status'))
           <div class="btn btn-success">{{ session('status') }}</div>
@@ -23,7 +23,9 @@
               <tr>
                 <th>#</th>
                 <th>Montant</th>
-                <th>Détails</th>
+                <th>Téléphone</th>
+                <th>Nom & prénom</th>
+                <th>Type</th>
                 <th>Date et heure</th>
                 <th>Actions</th>
               </tr>
@@ -35,9 +37,28 @@
               @foreach ($transactions as $item)
               <tr>
                 <td>{{ $iteration }}</td>              
-                <td>{{ $item->montant }}</td>
-                <td>{{ $item->details }}</td>
+                <td>{{ $item->montant }} FCFA</td>
+                <td>
+                  @php
+                    $cli = App\Models\Client::find($item->client_id);
+                  @endphp
+                  {{ $cli->telephone }}
+                </td>
+                <td>
+                  @php
+                    $cli = App\Models\Client::find($item->client_id);
+                  @endphp
+                  {{ $cli->nom }} {{ $cli->prenom }}
+                </td>
+                <td>
+                  @if($item->type == 'depot')
+                    <b style="color: blue">Dépôt</b>
+                  @else
+                    <b style="color: red">Retrait</b>
+                  @endif
+                </td>
                 <td>{{ $item->dateHeure }}</td>
+                
                 <td>
                   <a href="{{ route('transaction.show', $item->id) }}"><i class="fa fa-edit mr-2 text-green"></i></a>
                   <a href="{{ route('transaction.delete', $item->id) }}"><i class="fa fa-trash text-red"></i></a>
@@ -52,7 +73,7 @@
 
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-3">
       
     </div>
 

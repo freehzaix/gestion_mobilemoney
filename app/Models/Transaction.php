@@ -11,6 +11,7 @@ class Transaction extends Model
 
     protected $fillable = [
         'montant',
+        'frais',
         'details',
         'dateHeure',
         'type',

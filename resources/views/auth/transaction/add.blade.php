@@ -8,7 +8,7 @@
 
 <div class="row mt-3">
     <div class="col-lg-8">
-        <form action="{{ route('transaction.add.post') }}" method="POST ">
+        <form action="{{ route('transaction.add.post') }}" method="POST">
             @csrf
             
             <div class="form-group">
@@ -18,7 +18,7 @@
 
                         <input type="text" id="telephone" name="telephone" class="form-control" placeholder="Numéro de téléphone">
 
-                        <select id="resultats" name="client_id" class="form-control" required>
+                        <select id="resultats" name="client_id" class="form-control">
                             
                         </select>
                         
@@ -69,10 +69,6 @@
             </div>
 
             <div class="form-group">
-                
-            </div>
-
-            <div class="form-group">
                 <label for="details">Détails</label>
                 <textarea name="details" id="details" cols="30" rows="5" class="form-control"></textarea>
             </div>
@@ -83,8 +79,8 @@
                         <label for="type">Type de transaction</label>
                         <select name="type" id="type" class="form-control">
                             <option value="">Choisir une option</option>
-                            <option value="Depot">Dépôt</option>
-                            <option value="Retrait">Retrait</option>
+                            <option value="depot">Dépôt</option>
+                            <option value="retrait">Retrait</option>
                         </select>
                     </div>
                     <div class="col">

@@ -31,13 +31,24 @@ class TransactionController extends Controller
     public function add_post(Request $request){
         
         $request->validate([
-            'telephone' => 'required',
+            'client_id' => 'required',
         ]);
+
+        if($request->type == 'depot'){
+            $cai = Caisse::find($request->caisse_id);
+            $cai->montant_caisse = ($cai->montant_caisse + $request->montant + $request->frais);
+            $cai->update();
+        }else if($request->type == 'retrait'){
+            $cai = Caisse::find($request->caisse_id);
+            $cai->montant_caisse = ($cai->montant_caisse - $request->montant - $request->frais);
+            $cai->update();
+        }
 
         $transaction = new Transaction();
         $transaction->montant = $request->montant;
         $transaction->details = $request->details;
         $transaction->type = $request->type;
+        $transaction->frais = $request->frais;
         $transaction->dateHeure = NOW();
         $transaction->client_id = $request->client_id;
         $transaction->caisse_id = $request->caisse_id;

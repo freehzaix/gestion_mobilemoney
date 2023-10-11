@@ -67,7 +67,7 @@ Route::prefix('dashboard')->group(function () {
 
     Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
     Route::get('/transaction/add', [TransactionController::class, 'add'])->name('transaction.add');
-    Route::post('/transaction/add', [TransactionController::class, 'add_post'])->name('transaction.add.post');
+    Route::post('/transaction/add/post', [TransactionController::class, 'add_post'])->name('transaction.add.post');
     Route::get('/transaction/edit/{id}', [TransactionController::class, 'show'])->name('transaction.show');
     Route::post('/transaction/update', [TransactionController::class, 'update'])->name('transaction.update');
     Route::get('/transaction/delete/{id}', [TransactionController::class, 'delete'])->name('transaction.delete');
