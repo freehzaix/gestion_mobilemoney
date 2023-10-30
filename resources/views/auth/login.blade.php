@@ -6,8 +6,8 @@
   <title>Se connecter | MobileApp Web</title>
 
   <!-- Favicons -->
-  <link href="/frontend/img/favicon.png" rel="icon">
-  <link href="/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./frontend/img/favicon.png" rel="icon">
+  <link href="./frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -22,7 +22,7 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="{{ route('login') }}">
-      <img src="/frontend/img/logo.png" alt="" class="img-fluid">
+      <img src="./frontend/img/logo.png" alt="" class="img-fluid">
     </a>
   </div>
   <!-- /.login-logo -->

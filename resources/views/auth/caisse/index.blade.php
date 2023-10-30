@@ -40,7 +40,7 @@
                   @php
                     $op = App\Models\Operateur::find($item->operateur_id);
                   @endphp
-                  <img src="/{{ $op->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
+                  <img src="./{{ $op->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
                 </td>
                 <td>{{ $item->nom_caisse }}</td>
                 <td>{{ $item->montant_caisse }} FCFA</td>

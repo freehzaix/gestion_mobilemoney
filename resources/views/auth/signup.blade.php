@@ -6,23 +6,23 @@
   <title>Création d'un compte | MobileApp Web</title>
 
   <!-- Favicons -->
-  <link href="/frontend/img/favicon.png" rel="icon">
-  <link href="/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./frontend/img/favicon.png" rel="icon">
+  <link href="./frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="./plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
     <a href="{{ route('login') }}">
-      <img src="/frontend/img/logo.png" alt="" class="img-fluid">
+      <img src="./frontend/img/logo.png" alt="" class="img-fluid">
     </a>
   </div>
   <!-- /.login-logo -->
@@ -128,10 +128,10 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="./plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/dist/js/adminlte.min.js"></script>
+<script src="./dist/js/adminlte.min.js"></script>
 </body>
 </html>

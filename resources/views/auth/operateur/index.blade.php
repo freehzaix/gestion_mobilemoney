@@ -35,7 +35,7 @@
               <tr>
                 <td>{{ $iteration }}</td>
                 <td>
-                  <img src="/{{ $item->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
+                  <img src="./{{ $item->url_operateur }}" alt="Logo {{ $item->nom_operateur }}" height="32px">
                 </td>
                 <td>{{ $item->nom_operateur }}</td>
                 <td>

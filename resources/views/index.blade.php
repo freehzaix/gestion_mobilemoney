@@ -8,24 +8,24 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="/frontend/img/favicon.png" rel="icon">
-  <link href="/frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./frontend/img/favicon.png" rel="icon">
+  <link href="./frontend/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="/frontend/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./frontend/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="/frontend/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="/frontend/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="/frontend/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="/frontend/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="/frontend/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="./frontend/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="./frontend/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="./frontend/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="./frontend/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="./frontend/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="/frontend/css/style.css" rel="stylesheet">
+  <link href="./frontend/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: NewBiz
@@ -46,7 +46,7 @@
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-        <a href="#intro" class="scrollto"><img src="/frontend/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="#intro" class="scrollto"><img src="./frontend/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
@@ -71,7 +71,7 @@
     <div class="container">
 
       <div class="intro-img">
-        <img src="/frontend/img/intro-img.svg" alt="" class="img-fluid">
+        <img src="./frontend/img/intro-img.svg" alt="" class="img-fluid">
       </div>
 
       <div class="intro-info">
@@ -126,13 +126,13 @@
           </div>
 
           <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
-            <img src="/frontend/img/about-img.svg" class="img-fluid" alt="">
+            <img src="./frontend/img/about-img.svg" class="img-fluid" alt="">
           </div>
         </div>
 
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp">
-            <img src="/frontend/img/about-extra-1.svg" class="img-fluid" alt="">
+            <img src="./frontend/img/about-extra-1.svg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
             <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
@@ -147,7 +147,7 @@
 
         <div class="row about-extra">
           <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
-            <img src="/frontend/img/about-extra-2.svg" class="img-fluid" alt="">
+            <img src="./frontend/img/about-extra-2.svg" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
@@ -330,12 +330,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/app1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 1</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="/frontend/img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -344,12 +344,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/web3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 3</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="/frontend/img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -358,12 +358,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/app2.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/app2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 2</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="/frontend/img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -372,12 +372,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/card2.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/card2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 2</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="/frontend/img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -386,12 +386,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/web2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 2</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="/frontend/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -400,12 +400,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/app3.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/app3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 3</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="/frontend/img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -414,12 +414,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/card1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 1</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="/frontend/img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -428,12 +428,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/card3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 3</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="/frontend/img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -442,12 +442,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="/frontend/img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/portfolio/web1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 1</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="/frontend/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="./frontend/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -475,7 +475,7 @@
             <div class="owl-carousel testimonials-carousel wow fadeInUp">
     
               <div class="testimonial-item">
-                <img src="/frontend/img/testimonial-1.jpg" class="testimonial-img" alt="">
+                <img src="./frontend/img/testimonial-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <p>
@@ -484,7 +484,7 @@
               </div>
     
               <div class="testimonial-item">
-                <img src="/frontend/img/testimonial-2.jpg" class="testimonial-img" alt="">
+                <img src="./frontend/img/testimonial-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <p>
@@ -493,7 +493,7 @@
               </div>
     
               <div class="testimonial-item">
-                <img src="/frontend/img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <img src="./frontend/img/testimonial-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
                 <p>
@@ -502,7 +502,7 @@
               </div>
     
               <div class="testimonial-item">
-                <img src="/frontend/img/testimonial-4.jpg" class="testimonial-img" alt="">
+                <img src="./frontend/img/testimonial-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
                 <p>
@@ -511,7 +511,7 @@
               </div>
     
               <div class="testimonial-item">
-                <img src="/frontend/img/testimonial-5.jpg" class="testimonial-img" alt="">
+                <img src="./frontend/img/testimonial-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
                 <p>
@@ -542,7 +542,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="/frontend/img/team-1.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/team-1.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Walter White</h4>
@@ -560,7 +560,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="/frontend/img/team-2.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/team-2.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sarah Jhonson</h4>
@@ -578,7 +578,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="/frontend/img/team-3.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/team-3.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>William Anderson</h4>
@@ -596,7 +596,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="/frontend/img/team-4.jpg" class="img-fluid" alt="">
+              <img src="./frontend/img/team-4.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Amanda Jepson</h4>
@@ -633,25 +633,25 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-1.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-1.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-2.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-2.png" class="img-fluid" alt="">
             </div>
           </div>
         
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-3.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-3.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-4.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-4.png" class="img-fluid" alt="">
             </div>
           </div>
           
@@ -663,19 +663,19 @@
         
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-6.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-6.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-7.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-7.png" class="img-fluid" alt="">
             </div>
           </div>
           
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
-              <img src="/frontend/img/clients/client-8.png" class="img-fluid" alt="">
+              <img src="./frontend/img/clients/client-8.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -762,7 +762,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>NewBiz</h3>
+            <h3>AP2S Technologies</h3>
             <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
           </div>
 
@@ -820,7 +820,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
         -->
-        Developed by <a href="https://jeanluc.freehzaix.com">Jean-Luc DOH</a>
+        Developed by <a href="#">Jean-Luc DOH</a>
       </div>
     </div>
   </footer><!-- #footer -->
@@ -830,22 +830,22 @@
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
-  <script src="/frontend/lib/jquery/jquery.min.js"></script>
-  <script src="/frontend/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="/frontend/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/frontend/lib/easing/easing.min.js"></script>
-  <script src="/frontend/lib/mobile-nav/mobile-nav.js"></script>
-  <script src="/frontend/lib/wow/wow.min.js"></script>
-  <script src="/frontend/lib/waypoints/waypoints.min.js"></script>
-  <script src="/frontend/lib/counterup/counterup.min.js"></script>
-  <script src="/frontend/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="/frontend/lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="/frontend/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="./frontend/lib/jquery/jquery.min.js"></script>
+  <script src="./frontend/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="./frontend/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./frontend/lib/easing/easing.min.js"></script>
+  <script src="./frontend/lib/mobile-nav/mobile-nav.js"></script>
+  <script src="./frontend/lib/wow/wow.min.js"></script>
+  <script src="./frontend/lib/waypoints/waypoints.min.js"></script>
+  <script src="./frontend/lib/counterup/counterup.min.js"></script>
+  <script src="./frontend/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="./frontend/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="./frontend/lib/lightbox/js/lightbox.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="/frontend/contactform/contactform.js"></script>
+  <script src="./frontend/contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="/frontend/js/main.js"></script>
+  <script src="./frontend/js/main.js"></script>
 
 </body>
 </html>

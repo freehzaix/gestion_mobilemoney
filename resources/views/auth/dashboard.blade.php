@@ -15,7 +15,7 @@
         
         <div class="row info-box">
             <div class="">
-                <img src="/{{ $item->url_operateur }}" height="100px" alt="{{ $item->nom_operateur }}">
+                <img src="./{{ $item->url_operateur }}" height="100px" alt="{{ $item->nom_operateur }}">
             </div>
             <div class="info-box-content">
                 @php 
