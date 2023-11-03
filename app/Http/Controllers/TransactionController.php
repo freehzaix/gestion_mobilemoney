@@ -59,25 +59,18 @@ class TransactionController extends Controller
 
     }
 
-    //Afficher le formulaire pour modifier une transaction
-    public function show($id){
-        $transaction = Transaction::find($id);
-        return view('auth.transaction.show', compact('transaction'));
-    }
-
-    //Modifier la transaction en Post
-    public function update(Request $request){
-        $transaction = Transaction::find($request->id);
-        $transaction->montant = $request->montant;
-        $transaction->details = $request->details;
-        $transaction->update();
-
-        return redirect()->route('transaction.index')->with('status', 'La transaction a bien été modifiée.');
-    }
-
     //Supprimer une transaction
     public function delete($id){
         $transaction = Transaction::find($id);
+        $caisse = Caisse::find($transaction->caisse_id);
+
+        if($transaction->type == "depot"){
+            $caisse->montant_caisse = ($caisse->montant_caisse - $transaction->montant);
+        }else{
+            $caisse->montant_caisse = ($caisse->montant_caisse + $transaction->montant);
+        }
+
+        $caisse->update();
         $transaction->delete();
 
         return redirect()->route('transaction.index')->with('status', 'La transaction a bien été supprimée.');

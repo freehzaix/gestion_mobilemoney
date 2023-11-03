@@ -27,7 +27,7 @@
                 <th>Nom & prénom</th>
                 <th>Type</th>
                 <th>Date et heure</th>
-                <th>Actions</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -60,7 +60,6 @@
                 <td>{{ $item->dateHeure }}</td>
                 
                 <td>
-                  <a href="{{ route('transaction.show', $item->id) }}"><i class="fa fa-edit mr-2 text-green"></i></a>
                   <a href="{{ route('transaction.delete', $item->id) }}"><i class="fa fa-trash text-red"></i></a>
                 </td>
               </tr>

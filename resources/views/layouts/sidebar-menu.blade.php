@@ -27,6 +27,7 @@
               </a>
             </li>
             
+            <!--
             <li class="nav-item">
               <a href="{{ route('abonnement') }}" class="nav-link">
                 <i class="fas fa-money-check-alt nav-icon"></i>
@@ -55,7 +56,8 @@
               </a>
             </li>
             @endif
-            
+          -->
+          
       </ul>
     </li>
     
